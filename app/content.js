@@ -1,53 +1,191 @@
 // All site text lives here. Edit this file to update the portfolio.
+// Text that differs per language sits under `nl` and `en` below; keep both in sync.
 
 export const me = {
   name: 'Finley van Bohemen',
   birth: '2010-10-20', // only the age shows on the site, but this file itself is public on GitHub
+  email: 'finleyvbohemen@gmail.com',
   github: 'Nemehob',
 };
 
-export const bio = [
-  'Ik doe mbo 4 Smart ICT Engineer.',
-  'Ik weet veel van hardware: Raspberry Pi\'s, IoT-apparaten, desktop-pc\'s, handhelds en cyberdecks.',
-  'Met software kan ik ook prima overweg, al heb ik daar minder ervaring mee.',
-  'Naast school vul ik vakken bij Karwei in Hoofddorp en zit ik bij de jeugdbrandweer in Hillegom.',
-];
-
-// Highlighted projects, shown above the GitHub list.
-// Example: { name: 'cyberdeck', desc: 'draagbare Linux-pc op een Raspberry Pi', link: 'https://github.com/...' }
-export const projects = [];
-
-// [when, what]
-export const experience = [
-  ['nu', 'mbo 4 Smart ICT Engineer'],
-  ['nu', 'vulploegmedewerker, Karwei Hoofddorp'],
-  ['nu', 'manschap, jeugdbrandweer Hillegom'],
-  ['klaar', 'mavo'],
-];
-
-export const skills = [
-  ['hardware', 'Raspberry Pi, IoT-apparaten, desktop-pc\'s, handhelds, cyberdecks'],
-  ['software', 'gaat prima, minder ervaring dan met hardware'],
-  ['talen', 'Nederlands (moedertaal), Engels (vloeiend)'],
-];
-
-// `neofetch` rows. The page adds name and age above these.
-export const sysinfo = [
-  ['Opleiding', 'mbo 4 Smart ICT Engineer'],
-  ['Werk', 'Karwei Hoofddorp'],
-  ['Vrijwillig', 'jeugdbrandweer Hillegom'],
-  ['Talen', 'Nederlands, Engels'],
-  ['GitHub', 'Nemehob'],
-];
-
-export const hobbies = [
-  'jeugdbrandweer',
-];
-
 // [label, text, href or null]
 export const links = [
-  ['e-mail', 'finleyvbohemen@gmail.com', 'mailto:finleyvbohemen@gmail.com'],
-  ['github', 'github.com/Nemehob', 'https://github.com/Nemehob'],
+  ['e-mail', me.email, `mailto:${me.email}`],
+  ['github', `github.com/${me.github}`, `https://github.com/${me.github}`],
   ['linkedin', 'linkedin.com/in/finley-van-bohemen', 'https://www.linkedin.com/in/finley-van-bohemen-3631b127b/'],
   ['whatsapp', 'Finleyvb', null],
 ];
+
+// Highlighted projects, shown above the GitHub list.
+// Example: { name: 'cyberdeck', link: 'https://github.com/...', nl: 'draagbare Linux-pc', en: 'portable Linux PC' }
+export const projects = [];
+
+const nl = {
+  locale: 'nl-NL',
+  bio: [
+    'Ik doe mbo 4 Smart ICT Engineer op het Nova College in Hoofddorp.',
+    'Ik weet veel van hardware: Raspberry Pi\'s, IoT-apparaten, desktop-pc\'s, handhelds en cyberdecks.',
+    'Met software kan ik ook prima overweg, al heb ik daar minder ervaring mee.',
+    'Naast school vul ik vakken bij Karwei in Hoofddorp en zit ik bij de jeugdbrandweer in Hillegom.',
+  ],
+  // [when, what]
+  experience: [
+    ['2026 – nu', 'mbo 4 Smart ICT Engineer, ROC Nova College Hoofddorp'],
+    ['2022 – 2026', 'vmbo-tl (mavo), Fioretti College Lisse'],
+    ['nu', 'vulploegmedewerker, Karwei Hoofddorp'],
+    ['nu', 'manschap, jeugdbrandweer Hillegom'],
+    ['1 jaar', 'juniorleiding, Scouting Hanckema'],
+    ['1 week', 'stage BHV-opleider & monteur, First Response'],
+    ['1 week', 'stage, Intratuin Lisse'],
+  ],
+  skills: [
+    ['hardware', 'Raspberry Pi, IoT-apparaten, desktop-pc\'s, handhelds, cyberdecks'],
+    ['software', 'gaat prima, minder ervaring dan met hardware'],
+    ['talen', 'Nederlands (moedertaal), Engels (vloeiend)'],
+  ],
+  // `neofetch` rows; the page adds name and age above these
+  sysinfo: [
+    ['Opleiding', 'mbo 4 Smart ICT Engineer'],
+    ['Werk', 'Karwei Hoofddorp'],
+    ['Vrijwillig', 'jeugdbrandweer Hillegom'],
+    ['Talen', 'Nederlands, Engels'],
+    ['GitHub', me.github],
+  ],
+  hobbies: ['jeugdbrandweer'],
+  help: {
+    over: 'wie ik ben',
+    projecten: 'mijn GitHub-projecten',
+    ervaring: 'school en werk',
+    skills: 'waar ik goed in ben',
+    hobbies: 'wat ik verder doe',
+    contact: 'hoe je me bereikt',
+    cv: 'alles op één scherm',
+    email: 'stuur me een mail',
+    github: 'github <repo>: details van één repo',
+    neofetch: 'alles in het kort',
+    raad: 'raad het getal',
+    theme: 'theme <naam>: andere kleuren',
+    lang: 'lang en: switch to English',
+    history: 'eerdere commando\'s',
+    echo: 'echo <tekst>',
+    date: 'datum en tijd',
+    pwd: 'huidige map',
+    uname: 'systeemnaam',
+    hostname: 'computernaam',
+    help: 'deze lijst',
+    clear: 'scherm leegmaken',
+    exit: 'uitloggen',
+  },
+  ui: {
+    lastLogin: 'laatst ingelogd',
+    hint: 'typ \'help\' voor alle commando\'s',
+    groups: { main: 'over mij', extra: 'overig' },
+    notFound: 'opdracht niet gevonden',
+    didYouMean: 'bedoel je',
+    age: (n) => `${n} jaar`,
+    name: 'Naam',
+    loading: 'laden...',
+    ghError: 'kon GitHub niet bereiken, kijk op',
+    noRepos: 'nog geen publieke repos, zie',
+    repoUsage: 'gebruik: github <repo>',
+    repoMissing: 'repo niet gevonden:',
+    repo: { name: 'naam', about: 'over', language: 'taal', stars: 'sterren', updated: 'bijgewerkt' },
+    email: 'mailprogramma openen...',
+    themes: 'thema\'s',
+    themeSet: 'thema',
+    langSet: 'taal: Nederlands',
+    langUsage: 'gebruik: lang nl of lang en',
+    gameStart: 'Ik denk aan een getal van 1 tot 100. Typ je gok, of stop.',
+    higher: 'hoger',
+    lower: 'lager',
+    won: (n) => `Goed geraden! ${n} ${n === 1 ? 'poging' : 'pogingen'}.`,
+    stopped: (n) => `Gestopt. Het getal was ${n}.`,
+    logout: 'uitgelogd',
+    pressKey: 'druk op een toets om weer in te loggen',
+  },
+};
+
+const en = {
+  locale: 'en-GB',
+  bio: [
+    'I\'m studying Smart ICT Engineer (MBO level 4) at Nova College in Hoofddorp.',
+    'I know a lot about hardware: Raspberry Pis, IoT devices, desktop PCs, handhelds and cyberdecks.',
+    'I\'m good with software too, though I have less experience there.',
+    'Besides school I stock shelves at Karwei in Hoofddorp and I\'m in the youth fire brigade in Hillegom.',
+  ],
+  experience: [
+    ['2026 – now', 'Smart ICT Engineer (MBO level 4), ROC Nova College Hoofddorp'],
+    ['2022 – 2026', 'VMBO-TL (mavo), Fioretti College Lisse'],
+    ['now', 'shelf stocker, Karwei Hoofddorp'],
+    ['now', 'crew member, youth fire brigade Hillegom'],
+    ['1 year', 'junior leader, Scouting Hanckema'],
+    ['1 week', 'internship, emergency response trainer & technician, First Response'],
+    ['1 week', 'internship, Intratuin Lisse'],
+  ],
+  skills: [
+    ['hardware', 'Raspberry Pi, IoT devices, desktop PCs, handhelds, cyberdecks'],
+    ['software', 'good, less experience than with hardware'],
+    ['languages', 'Dutch (native), English (fluent)'],
+  ],
+  sysinfo: [
+    ['Education', 'Smart ICT Engineer, MBO 4'],
+    ['Work', 'Karwei Hoofddorp'],
+    ['Volunteer', 'youth fire brigade Hillegom'],
+    ['Languages', 'Dutch, English'],
+    ['GitHub', me.github],
+  ],
+  hobbies: ['youth fire brigade'],
+  help: {
+    over: 'who I am',
+    projecten: 'my GitHub projects',
+    ervaring: 'school and work',
+    skills: 'what I\'m good at',
+    hobbies: 'what else I do',
+    contact: 'how to reach me',
+    cv: 'everything on one screen',
+    email: 'send me an email',
+    github: 'github <repo>: details of one repo',
+    neofetch: 'the short version',
+    raad: 'guess the number',
+    theme: 'theme <name>: different colours',
+    lang: 'lang nl: naar het Nederlands',
+    history: 'previous commands',
+    echo: 'echo <text>',
+    date: 'date and time',
+    pwd: 'current directory',
+    uname: 'system name',
+    hostname: 'computer name',
+    help: 'this list',
+    clear: 'clear the screen',
+    exit: 'log out',
+  },
+  ui: {
+    lastLogin: 'last login',
+    hint: 'type \'help\' to see all commands',
+    groups: { main: 'about me', extra: 'other' },
+    notFound: 'command not found',
+    didYouMean: 'did you mean',
+    age: (n) => `${n} years old`,
+    name: 'Name',
+    loading: 'loading...',
+    ghError: 'couldn\'t reach GitHub, see',
+    noRepos: 'no public repos yet, see',
+    repoUsage: 'usage: github <repo>',
+    repoMissing: 'repo not found:',
+    repo: { name: 'name', about: 'about', language: 'language', stars: 'stars', updated: 'updated' },
+    email: 'opening your mail app...',
+    themes: 'themes',
+    themeSet: 'theme',
+    langSet: 'language: English',
+    langUsage: 'usage: lang nl or lang en',
+    gameStart: 'I\'m thinking of a number from 1 to 100. Type your guess, or stop.',
+    higher: 'higher',
+    lower: 'lower',
+    won: (n) => `Got it! ${n} ${n === 1 ? 'try' : 'tries'}.`,
+    stopped: (n) => `Stopped. The number was ${n}.`,
+    logout: 'logged out',
+    pressKey: 'press any key to log back in',
+  },
+};
+
+export const TEXT = { nl, en };
