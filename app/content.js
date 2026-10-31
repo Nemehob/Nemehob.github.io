@@ -8,7 +8,7 @@ export const me = {
 
 export const bio = [
   'Ik doe mbo 4 Smart ICT Engineer.',
-  'Het meeste wat ik doe is hardware: Raspberry Pi\'s, IoT, pc\'s bouwen en repareren, handhelds en cyberdecks.',
+  'Ik weet veel van hardware: Raspberry Pi\'s, IoT-apparaten, desktop-pc\'s, handhelds en cyberdecks.',
   'Met software kan ik ook prima overweg, al heb ik daar minder ervaring mee.',
   'Naast school vul ik vakken bij Karwei in Hoofddorp en zit ik bij de jeugdbrandweer in Hillegom.',
 ];
@@ -26,14 +26,12 @@ export const experience = [
 ];
 
 export const skills = [
-  ['hardware', 'Raspberry Pi, IoT, pc\'s bouwen en repareren, handhelds, cyberdecks'],
+  ['hardware', 'Raspberry Pi, IoT-apparaten, desktop-pc\'s, handhelds, cyberdecks'],
   ['software', 'gaat prima, minder ervaring dan met hardware'],
   ['talen', 'Nederlands (moedertaal), Engels (vloeiend)'],
 ];
 
 export const hobbies = [
-  'cyberdecks en handhelds bouwen',
-  'knutselen met Raspberry Pi\'s en IoT',
   'jeugdbrandweer',
 ];
 
