@@ -31,6 +31,15 @@ export const skills = [
   ['talen', 'Nederlands (moedertaal), Engels (vloeiend)'],
 ];
 
+// `neofetch` rows. The page adds name and age above these.
+export const sysinfo = [
+  ['Opleiding', 'mbo 4 Smart ICT Engineer'],
+  ['Werk', 'Karwei Hoofddorp'],
+  ['Vrijwillig', 'jeugdbrandweer Hillegom'],
+  ['Talen', 'Nederlands, Engels'],
+  ['GitHub', 'Nemehob'],
+];
+
 export const hobbies = [
   'jeugdbrandweer',
 ];

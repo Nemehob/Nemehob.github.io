@@ -5,6 +5,7 @@ export const COMMANDS = [
   ['skills', 'waar ik goed in ben'],
   ['hobbies', 'wat ik verder doe'],
   ['contact', 'hoe je me bereikt'],
+  ['neofetch', 'alles in het kort'],
   ['help', 'deze lijst'],
   ['clear', 'scherm leegmaken'],
 ];

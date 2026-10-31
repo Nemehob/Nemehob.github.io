@@ -35,6 +35,9 @@ a:hover { color: #fff; }
 .user { color: var(--green); font-weight: bold; }
 .path { color: var(--blue); font-weight: bold; }
 
+.neofetch { display: flex; flex-wrap: wrap; gap: 1em 4ch; }
+.neofetch pre { margin: 0; font: inherit; }
+
 .grid { display: grid; grid-template-columns: auto 1fr; gap: 0 3ch; }
 
 .prompt { display: flex; gap: 1ch; }

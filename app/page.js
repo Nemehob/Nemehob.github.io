@@ -1,9 +1,20 @@
 'use client';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { COMMANDS, resolve, complete, age } from './lib';
-import { me, bio, projects, experience, skills, hobbies, links } from './content';
+import { me, bio, projects, experience, skills, sysinfo, hobbies, links } from './content';
 
 const ext = { target: '_blank', rel: 'noreferrer' };
+
+const TUX = String.raw`    .--.
+   |o_o |
+   |:_/ |
+  //   \ \
+ (|     | )
+/'\_   _/'\
+\___)=(___/`;
+
+// The 8 normal ANSI terminal colours, like the colour bar at the bottom of real neofetch.
+const ANSI = ['#3b3b3b','#c50f1f', '#13a10e', '#c19c00', '#0037da', '#881798', '#3a96dd', '#cccccc'];
 
 // One shared request, so repeated `projecten` calls don't hit GitHub's 60/hour anonymous limit.
 let reposPromise;
@@ -56,6 +67,21 @@ const OUTPUT = {
   ),
   ervaring: () => <Table rows={experience} />,
   skills: () => <Table rows={skills} />,
+  neofetch: () => (
+    <div className="neofetch">
+      <pre aria-hidden="true">{TUX}</pre>
+      <div>
+        <p className="user">finley@portfolio</p>
+        <p>----------------</p>
+        {[['Naam', me.name], ['Uptime', `${age(me.birth)} jaar`], ...sysinfo].map(([k, v]) => (
+          <p key={k}><span className="user">{k}</span>: {v}</p>
+        ))}
+        <p aria-hidden="true">
+          {ANSI.map((c) => <span key={c} style={{ background: c }}>{'   '}</span>)}
+        </p>
+      </div>
+    </div>
+  ),
   hobbies: () => <ul>{hobbies.map((h) => <li key={h}>- {h}</li>)}</ul>,
   contact: () => (
     <Table
