@@ -11,6 +11,8 @@ test('resolve', () => {
 
 test('complete', () => {
   assert.equal(complete('pro'), 'projecten');
+  assert.equal(complete('h'), 'h'); // help and hobbies both match
+  assert.equal(complete('ho'), 'hobbies');
   assert.equal(complete('xyz'), 'xyz');
 });
 

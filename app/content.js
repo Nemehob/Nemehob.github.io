@@ -2,44 +2,39 @@
 
 export const me = {
   name: 'Finley van Bohemen',
-  birth: '2010-10-20', // only the age is shown on the site
-  location: 'Nederland',
+  birth: '2010-10-20', // only the age shows on the site, but this file itself is public on GitHub
   github: 'Nemehob',
-  bio: [
-    'Hoi! Ik ben Finley, student MBO 4 Smart ICT Engineer.',
-    'Ik voel me thuis bij vrijwel alle soorten hardware: van Raspberry Pi\'s en IoT-apparaten tot desktop-pc\'s, handheld computers en cyberdecks.',
-    'Aan de softwarekant weet ik ook goed de weg, en daar leer ik elke dag bij.',
-  ],
 };
 
-// Highlighted projects, shown above the live list of GitHub repos.
-// Example: { name: 'Cyberdeck v1', desc: 'Draagbare Linux-computer op een Raspberry Pi', tech: 'Raspberry Pi, 3D-print', link: 'https://github.com/...' }
+export const bio = [
+  'Ik doe mbo 4 Smart ICT Engineer.',
+  'Het meeste wat ik doe is hardware: Raspberry Pi\'s, IoT, pc\'s bouwen en repareren, handhelds en cyberdecks.',
+  'Met software kan ik ook prima overweg, al heb ik daar minder ervaring mee.',
+  'Naast school vul ik vakken bij Karwei in Hoofddorp en zit ik bij de jeugdbrandweer in Hillegom.',
+];
+
+// Highlighted projects, shown above the GitHub list.
+// Example: { name: 'cyberdeck', desc: 'draagbare Linux-pc op een Raspberry Pi', link: 'https://github.com/...' }
 export const projects = [];
 
+// [when, what]
 export const experience = [
-  { role: 'Student MBO 4 Smart ICT Engineer', place: '', when: 'heden' },
-  { role: 'Vulploegmedewerker', place: 'Karwei Hoofddorp', when: 'heden' },
-  { role: 'Manschap', place: 'Jeugdbrandweer Hillegom', when: 'heden' },
-  { role: 'Diploma MAVO', place: '', when: 'afgerond' },
+  ['nu', 'mbo 4 Smart ICT Engineer'],
+  ['nu', 'vulploegmedewerker, Karwei Hoofddorp'],
+  ['nu', 'manschap, jeugdbrandweer Hillegom'],
+  ['klaar', 'mavo'],
 ];
 
-// [name, level out of 10]
 export const skills = [
-  ['Raspberry Pi & IoT', 9],
-  ['Desktop-pc\'s bouwen & repareren', 9],
-  ['Handhelds & cyberdecks', 9],
-  ['Software', 7],
-];
-
-export const languages = [
-  ['Nederlands', 'moedertaal'],
-  ['Engels', 'vloeiend'],
+  ['hardware', 'Raspberry Pi, IoT, pc\'s bouwen en repareren, handhelds, cyberdecks'],
+  ['software', 'gaat prima, minder ervaring dan met hardware'],
+  ['talen', 'Nederlands (moedertaal), Engels (vloeiend)'],
 ];
 
 export const hobbies = [
-  'Cyberdecks en handheld computers bouwen',
-  'Experimenteren met Raspberry Pi\'s en IoT-gadgets',
-  'Jeugdbrandweer Hillegom',
+  'cyberdecks en handhelds bouwen',
+  'knutselen met Raspberry Pi\'s en IoT',
+  'jeugdbrandweer',
 ];
 
 // [label, text, href or null]

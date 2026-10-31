@@ -1,12 +1,11 @@
 export const COMMANDS = [
-  ['help', 'toon alle commando\'s'],
-  ['over', 'wie ben ik?'],
-  ['projecten', 'waar ik aan werk'],
-  ['ervaring', 'opleiding & werk'],
-  ['skills', 'wat ik kan'],
-  ['hobbies', 'leuke feitjes'],
-  ['contact', 'neem contact op'],
-  ['neofetch', 'systeeminfo'],
+  ['over', 'wie ik ben'],
+  ['projecten', 'mijn GitHub-projecten'],
+  ['ervaring', 'school en werk'],
+  ['skills', 'waar ik goed in ben'],
+  ['hobbies', 'wat ik verder doe'],
+  ['contact', 'hoe je me bereikt'],
+  ['help', 'deze lijst'],
   ['clear', 'scherm leegmaken'],
 ];
 
@@ -15,10 +14,8 @@ const ALIASES = {
   about: 'over', whoami: 'over',
   projects: 'projecten',
   experience: 'ervaring', cv: 'ervaring',
-  vaardigheden: 'skills',
   fun: 'hobbies',
   cls: 'clear',
-  sudo: 'sudo',
 };
 
 const NAMES = new Set(COMMANDS.map(([n]) => n));
@@ -31,9 +28,11 @@ export function resolve(input) {
   return ALIASES[word] ?? 'unknown';
 }
 
+// Like bash: only completes when exactly one command matches.
 export function complete(partial) {
   const p = partial.trim().toLowerCase();
-  return p ? COMMANDS.find(([n]) => n.startsWith(p))?.[0] ?? partial : partial;
+  const hits = p ? COMMANDS.filter(([n]) => n.startsWith(p)) : [];
+  return hits.length === 1 ? hits[0][0] : partial;
 }
 
 // Parsed as local date parts so the birthday doesn't shift a day in other time zones.
